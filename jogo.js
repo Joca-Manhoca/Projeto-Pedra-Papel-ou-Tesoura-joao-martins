@@ -9,14 +9,13 @@ function getComputerChoice(){
         return "rock";
     } else if (choice <= 0.66){
         return "paper";
-    } else {
+    } else if (choice > 0.66 ){
         return "scissors";
     }
 }
 
 function getHumanChoice(){
-    let choose = prompt("write what you want to use between rock or paper or scissors");
-    let choice = choose.toLowerCase;
+    let choice = prompt("write what you want to use between 1 for rock or 2 for paper or 3 for scissors");
     console.log("you choose", choice);
     return choice;
 }
@@ -24,30 +23,33 @@ function getHumanChoice(){
 function  playRound(humanChoice, computerChoice){
     humanChoice = getHumanChoice();
     computerChoice = getComputerChoice();
-    if (humanChoice == "scissors" && computerChoice == "rock") {
+    if (humanChoice == 3 && computerChoice == "rock") {
         computerScore = computerScore + 1;
         console.log ("you lose the score is you", humanChoice, "- computer", computerChoice);
         return "you lose the score is you", humanChoice, "- computer", computerChoice;
-    } else if (humanChoice == "rock" && computerChoice == "paper") {
+    } else if (humanChoice == 1 && computerChoice == "paper") {
         computerScore = computerScore + 1;
         console.log ("you lose the score is you", humanChoice, "- computer", computerChoice);
         return "you lose the score is you", humanChoice, "- computer", computerChoice;
-    } else if (humanChoice == "paper" && computerChoice == "scissors") {
+    } else if (humanChoice == 2 && computerChoice == "scissors") {
         computerScore = computerScore + 1;
         console.log ("you lose the score is you", humanChoice, "- computer", computerChoice);
         return "you lose the score is you", humanChoice, "- computer", computerChoice;
-    } else if (humanChoice == "paper" && computerChoice == "rock"){
+    } else if (humanChoice == 2 && computerChoice == "rock"){
         humanScore = humanChoice + 1;
         console.log("you win the score is you", humanChoice, "- computer", computerChoice);
         return "you win the score is you", humanChoice, "- computer", computerChoice;
-    } else if (humanChoice == "scissors" && computerChoice == "paper"){
+    } else if (humanChoice == 3 && computerChoice == "paper"){
         humanScore = humanChoice + 1;
         console.log("you win the score is you", humanChoice, "- computer", computerChoice);
         return "you win the score is you", humanChoice, "- computer", computerChoice;
-    } else if (humanChoice == "rock" && computerChoice == "scissors"){
+    } else if (humanChoice == 1 && computerChoice == "scissors"){
         humanScore = humanChoice + 1;
         console.log("you win the score is you", humanChoice, "- computer", computerChoice);
         return "you win the score is you", humanChoice, "- computer", computerChoice;
+    } else if (humanChoice == 3 && computerChoice == "scissors" || humanChoice == 2 && computerChoice == "paper" || humanChoice == 1 && computerChoice == "rock"){
+        console.log("you drawn the score is you", humanChoice, "- computer", computerChoice);
+        return "you drawn the score is you", humanChoice, "- computer", computerChoice;
     }
 }
 
