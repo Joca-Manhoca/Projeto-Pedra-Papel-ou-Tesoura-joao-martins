@@ -16,7 +16,7 @@ function getComputerChoice(){
 
 function getHumanChoice(){
     let choice = prompt("write if you want rock or paper or scissors");
-    return "you choose ${choice}";
+    return "you choose", choice;
 }
 
 function  playRound(humanChoice, computerChoice){
@@ -46,7 +46,7 @@ function  playRound(humanChoice, computerChoice){
 }
 
 function playGame(){
-    for(let n = 0; n <= 5; i++){
+    for(let n = 0; n <= 5; n++){
         console.log(playRound());
     }
     if (humanScore > computerScore) {
