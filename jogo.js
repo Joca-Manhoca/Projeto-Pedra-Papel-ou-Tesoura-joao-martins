@@ -25,31 +25,31 @@ function  playRound(humanChoice, computerChoice){
     computerChoice = getComputerChoice();
     if (humanChoice == 3 && computerChoice == "rock") {
         computerScore = computerScore + 1;
-        console.log ("you lose the score is you", humanChoice, "- computer", computerChoice);
-        return "you lose the score is you", humanChoice, "- computer", computerChoice;
+        console.log ("you lose the score is you", humanScore, "- computer", computerScore);
+        return "you lose the score is you", humanScore, "- computer", computerScore;
     } else if (humanChoice == 1 && computerChoice == "paper") {
         computerScore = computerScore + 1;
-        console.log ("you lose the score is you", humanChoice, "- computer", computerChoice);
-        return "you lose the score is you", humanChoice, "- computer", computerChoice;
+        console.log ("you lose the score is you", humanScore, "- computer", computerScore);
+        return "you lose the score is you", humanScore, "- computer", computerScore;
     } else if (humanChoice == 2 && computerChoice == "scissors") {
         computerScore = computerScore + 1;
-        console.log ("you lose the score is you", humanChoice, "- computer", computerChoice);
-        return "you lose the score is you", humanChoice, "- computer", computerChoice;
+        console.log ("you lose the score is you", humanScore, "- computer", computerScore);
+        return "you lose the score is you", humanScore, "- computer", computerScore;
     } else if (humanChoice == 2 && computerChoice == "rock"){
-        humanScore = humanChoice + 1;
-        console.log("you win the score is you", humanChoice, "- computer", computerChoice);
-        return "you win the score is you", humanChoice, "- computer", computerChoice;
+        humanScore = humanScore + 1;
+        console.log("you win the score is you", humanScore, "- computer", computerScore);
+        return "you win the score is you", humanScore, "- computer", computerScore;
     } else if (humanChoice == 3 && computerChoice == "paper"){
-        humanScore = humanChoice + 1;
-        console.log("you win the score is you", humanChoice, "- computer", computerChoice);
-        return "you win the score is you", humanChoice, "- computer", computerChoice;
+        humanScore = humanScore + 1;
+        console.log("you win the score is you", humanScore, "- computer", computerScore);
+        return "you win the score is you", humanScore, "- computer", computerScore;
     } else if (humanChoice == 1 && computerChoice == "scissors"){
-        humanScore = humanChoice + 1;
-        console.log("you win the score is you", humanChoice, "- computer", computerChoice);
-        return "you win the score is you", humanChoice, "- computer", computerChoice;
+        humanScore = humanScore + 1;
+        console.log("you win the score is you", humanScore, "- computer", computerScore);
+        return "you win the score is you", humanScore, "- computer", computerScore;
     } else if (humanChoice == 3 && computerChoice == "scissors" || humanChoice == 2 && computerChoice == "paper" || humanChoice == 1 && computerChoice == "rock"){
-        console.log("you drawn the score is you", humanChoice, "- computer", computerChoice);
-        return "you drawn the score is you", humanChoice, "- computer", computerChoice;
+        console.log("you drawn the score is you", humanScore, "- computer", computerScore);
+        return "you drawn the score is you", humanScore, "- computer", computerScore;
     }
 }
 
